@@ -29,8 +29,6 @@ def getLosers():
 stuff = open('names.txt', 'r')
 
 allUsers = [stuff.readlines()]
-amount = allUsers[0].count('\n')
-print(amount)
 
 while True:
 

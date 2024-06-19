@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import datetime
+
+
+print()
 
 def getLosers():
     # URL of the webpage
@@ -22,19 +26,22 @@ def getLosers():
 
     return titles
 
-stuff = open('lunarClientStoreStalker.txt', 'r')
+stuff = open('names.txt', 'r')
 
 allUsers = [stuff.readlines()]
 
 while True:
 
-    storage = open('lunarClientStoreStalker.txt', 'a+')
+    storage = open('names.txt', 'a+')
+    times = open('times.txt', 'a+')
     for title in getLosers():
         if title is not None:
             if title not in allUsers:
                 storage.write(title + '\n')
+                times.write(str(datetime.datetime.now()) + '\n')
                 print(title)
-                allUsers.append(title)    
-    storage.close()                
-                
-    time.sleep(20)
+                allUsers.append(title)
+    storage.close()
+    times.close()
+
+    time.sleep(45)

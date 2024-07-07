@@ -1,0 +1,85 @@
+    @font-face {
+      font-family: 'Lunar';
+      src: url(https://static.moonsworth.store/6ab4ea0600ca447e882e4f083b2f6475/fonts/Panton-BlackCaps-3e0e02e9c505875bd15fc5cf6d8e6641.woff2);
+    }
+
+    body {
+      background-image: url('https://www.lunarclient.com/_next/static/images/home-855f11adf167d3e8ab2ed16bd8ebc9f2.webp');
+      background-size: cover;
+      overflow: auto;
+      margin: 0;
+      font-family: 'Lunar', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1,
+    p {
+      margin: 10px 0;
+    }
+
+    h1 {
+      margin-top: 30px;
+      /* Added margin to move the header down */
+    }
+
+    p {
+      margin-top: 20px;
+      /* Added margin to move the paragraphs down */
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85vh;
+    }
+
+    .table-wrapper {
+      background-color: rgba(255, 255, 255, 0.24);
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 800px;
+      overflow-x: auto;
+      max-height: 600px;
+      /* Adjust the max-height to fit 30 rows approximately */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      color: white;
+      font-family: 'Lunar';
+    }
+
+    th {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    tbody {
+      display: block;
+      overflow-y: auto;
+      max-height: 450px;
+      /* Adjust the height for scrolling within the tbody */
+    }
+
+    tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    thead,
+    tbody tr {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
